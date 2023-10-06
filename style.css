@@ -1,11 +1,11 @@
 body {
   margin: 0;
-  background: #f5f5f5;
 }
 
 main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  color: #333333;
 }
 
 /* nav style */
@@ -13,11 +13,9 @@ main nav {
   max-width: 100%;
   grid-column: span 2;
   text-align: center;
-  margin: 30px 0;
-  position: sticky;
-  top: 0;
-  height: 100vh;
   box-sizing: border-box;
+  background: #d1a8b3e8;
+  color: #85203b;
 }
 
 nav img {
@@ -41,7 +39,7 @@ main article {
   background: #fff;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 400px 400px 200px 200px 20px 300px;
+  background: #85203b;
 }
 
 article img {
@@ -54,34 +52,40 @@ article img {
 article .about {
   grid-column: span 6;
   padding: 60px 50px;
+  color: #fff;
 }
 
 /*article services*/
 article .services {
   grid-column: span 6;
-  background: #f5f5f5;
+  background: #d1a8b325;
   margin: 10px 20px;
   height: 200px;
+  align-self: center;
 }
 
 .services li {
-  list-style-type: none;
+  margin: 10px 0;
+  color: #fff;
 }
 
 /*article skills*/
 article .skills {
   grid-column: span 6;
-  background: #f5f5f5;
+  background: #d1a8b325;
   height: 200px;
   margin: 20px 20px;
 }
 
 .skills li {
-  list-style-type: none;
+  margin: 10px 0;
+  color: #fff;
+  
 }
 
 .services h2, .skills h2 {
   text-align: center;
+  color: #fff;
 }
 
 /*article Contact*/
@@ -89,13 +93,14 @@ article .Contact {
   grid-column: span 12;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  background: #fff;
+   background: #85203b;
   border-bottom: 20px;
 }
 
 article .Contact h2 {
   grid-column: span 12;
   text-align: center;
+  color: #fff;
 }
 
 article .Contact form {
@@ -104,13 +109,14 @@ article .Contact form {
   justify-self: center;
   margin: 10px 0;
   padding: 20px 30px;
-  background: #f5f5f5;
+  background: #d1a8b325;
   width: 60%;
 }
 
 /*form*/
 form div {
   margin: 10px 10px;
+  color: #fff;
 }
 
 form input[type=text]{
@@ -139,7 +145,6 @@ form textarea {
  
  main article {
   grid-column: span 12;
-  grid-template-rows: 300px 250px 230px 230px 20px 300px;
  }
  
  article img {
@@ -157,5 +162,19 @@ form textarea {
  
  article .skills {
   grid-column: span 12;
+ }
+ 
+ article .Contact form{
+   grid-column: span 12;
+ }
+ 
+ form div {
+   margin: 10px 5px;
+   width: 80%;
+ }
+ 
+ form input[type=text] {
+   width: 100%;
+   margin: 5px 5px;
  }
 }
