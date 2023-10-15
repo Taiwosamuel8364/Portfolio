@@ -7,6 +7,9 @@ main {
   grid-template-columns: repeat(12, 1fr);
   color: #333333;
 }
+ .tab {
+   display: none;
+ }
 
 /* nav style */
 main nav {
@@ -33,6 +36,11 @@ nav a {
   line-height: 20px;
   margin-bottom: 30px;
 }
+
+.cancel {
+  visibility: hidden;
+}
+
 /* article style */
 main article {
   grid-column: span 10;
@@ -140,11 +148,27 @@ form textarea {
   border: none;
   display: block;
 }
+
+
+
 @media screen and (max-width: 1000px){
-  main nav {
-    display: none;
-  }
- 
+main nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: 0.1s linear;
+}
+
+nav a {
+  visibility: hidden;
+}
+
+nav h2, nav p {
+  visibility: hidden;
+}
+
  main article {
   grid-column: span 12;
  }
@@ -183,5 +207,26 @@ form textarea {
  form textarea {
    width: 80%;
    margin: 5px 5px;
+ }
+ 
+ .cancel {
+   position: relative;
+   top: -190px;
+   left: 220px;
+   font-size: 2.5em;
+   visibility: hidden;
+ }
+ 
+ .tab {
+   display: block;
+   position: absolute;
+   top: -50px;
+   left: -20px;
+   width: 50px;
+   height: auto;
+ }
+ 
+ .tab img {
+   width: 100%;
  }
 }
